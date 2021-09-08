@@ -1,4 +1,5 @@
 import React from 'react';
+import './TrainingCard.css'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -9,6 +10,9 @@ const useStyles = makeStyles({
     root: {
         minWidth: 275,
         height: 300,
+        padding: 10,
+        backgroundColor: '#29282D',
+        color:'#FFFFFF'
     },
     bullet: {
         display: 'inline-block',
@@ -29,27 +33,26 @@ const TrainingCard = ({ training }) => {
     return (
         <div className='col-md-3 py-2 '>
             {
-                training.img ? <img style={{ width: '100%', height: '300px' }} src={img} alt="" /> :
+                training.img ? <img className='zoom' style={{ width: '100%', height: '300px' }} src={img} alt="" /> :
                     <div className="d-flex align-items-center">
                         <Card className={classes.root}>
                             <CardContent>
-                                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                <Typography class={'pt-3'} variant="h3" component="h2" className={classes.title}  gutterBottom>
                                     {title}
                                 </Typography>
-                                <Typography variant="h5" component="h2">
+                                <Typography class={'py-2'}  variant="h5" component="h2">
                                     {mainTittle}
                                 </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
+                                <Typography class={'py-2'} className={classes.pos} >
                                     {description}
                                 </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
+                                <Typography   className={classes.pos} >
                                     {footerText}
                                 </Typography>
                             </CardContent>
                         </Card>
                     </div>
             }
-
         </div>
     );
 };
