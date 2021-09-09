@@ -24,13 +24,16 @@ const trainigData = [
         img: training2
     },
     {
+        img: training3
+    },
+    {
         title: 'CARDIO WORKFLOW',
         mainTitle: 'CARDIO',
         description: 'Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus maecenas',
         footerText: 'READ MORE',
     },
     {
-        img: training3
+        img: training4
     },
     {
         title: 'POWER FLOW',
@@ -38,16 +41,13 @@ const trainigData = [
         description: 'Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus maecenas',
         footerText: 'READ MORE',
     },
-    {
-        img: training4
-    },
 ]
 
 const Training = () => {
     return (
         <section className="training-container">
             <div className="row">
-                <div className='trainig-text text-center pt-4'>
+                <div className='trainig-text text-center pt-4 w-100'>
                     <h2 className='pt-3'>TRAINING PROGRAMS</h2>
                     <p >Let us take your workout routines to the next level with our full-body programs and <br /> intensity challenges. Find a training that matches your needs.</p>
                 </div>

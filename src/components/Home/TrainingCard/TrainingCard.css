@@ -1,6 +1,5 @@
 .zoom {
-    padding: 5px;
-    transition: transform .2s;
+    transition: transform .9s;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;

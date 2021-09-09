@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../../img/logo.jpg'
+import logo from '../../../img/logo.jpg'
 import './NavBar.css'
 
 const NavBar = () => {
@@ -9,7 +9,9 @@ const NavBar = () => {
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <img className="logo" src={logo} alt="" />
+                <div href="/">
+                <img  className="logo" src={logo} alt="" />
+                </div>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav ms-auto mt-2 text-dark">
