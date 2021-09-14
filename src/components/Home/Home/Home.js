@@ -10,7 +10,7 @@ import Training from '../Training/Training';
 const Home = () => {
     return (
         <div>
-           
+           <NavBar/>
             <Header></Header>
             <Services></Services>
             <Training></Training>
