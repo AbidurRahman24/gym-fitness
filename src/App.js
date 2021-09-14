@@ -9,8 +9,10 @@ import NoMatch from './components/NoMatch/NoMatch';
 import Login from './components/Login/Login';
 import Order from "./components/Order/Order/Order";
 import Review from "./components/Order/Order/Review/Review";
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
+
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
 
@@ -24,9 +26,9 @@ function App() {
         <Route exact path='/admin'>
           <Home></Home>
         </Route>
-        <Route path='/order/review'>
+        <PrivateRoute path='/order/review'>
           <Review></Review>
-        </Route>
+        </PrivateRoute>
         <Route path='/order'>
           <Order></Order>
         </Route>

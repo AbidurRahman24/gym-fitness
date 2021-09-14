@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext  } from 'react';
+import { UserContext } from '../../../../App';
 import SiteBar from '../../../Shared/SiteBar/SiteBar';
 
 const Review = () => {
@@ -9,9 +10,23 @@ const Review = () => {
         newInfo[e.target.name] = e.target.value;
         setInfo(newInfo);
     }
-
-    const handleSubmit = () => {;
-        console.log(info);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const handleSubmit = () => {
+        const reviews = { ...loggedInUser, review: info };
+        fetch('http://localhost:5000/addReview', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reviews)
+          })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
     return (
         <>

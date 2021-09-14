@@ -4,10 +4,22 @@ import firebaseConfig from './firebase.config';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  } from '@fortawesome/free-solid-svg-icons';
+import {  faFileAlt } from '@fortawesome/free-regular-svg-icons'
 initializeApp(firebaseConfig);
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+      },
+    },
+  }));
 const Login = () => {
+    const classes = useStyles();
     const [user, setUser] = useState({
         isSignedIn: false,
         name: '',
@@ -62,9 +74,17 @@ const Login = () => {
     }
 
     return (
-        <div>
-            {user.isSignedIn ? <button onClick={handleSignOut}>Sign Out</button> :
-                <button onClick={handleSignIn}>Sign In</button>
+        <div className='d-flex justify-content-center align-items-center' style={{width: '100%', height:'600px'}}>
+            {user.isSignedIn ? 
+            
+            <div>
+                <i class="bi bi-google"></i>
+                <Button variant="contained" color="primary" onClick={handleSignOut}> Sign Out </Button> 
+            </div>:
+            <div>
+                <i class="bi bi-google"></i>
+                <Button variant="contained" color="primary" onClick={handleSignIn}> Sign In </Button>
+            </div>
             }
         </div>
     );
