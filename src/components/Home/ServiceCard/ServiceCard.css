@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 .service-container {
     position: relative;
     width: 50%;
@@ -23,13 +24,15 @@
   }
   .service-container:hover .image {
     opacity: 0.3;
+    background-color: #29282D;
   }
   .service-container:hover .middle {
     opacity: 1;
   }
   .text {
-    background-color: #04AA6D;
+    background-color: #F34E3A;
     color: white;
+    font-family: 'Teko';
     font-size: 16px;
-    padding: 20px 40px;
+    padding: 10px 20px;
   }

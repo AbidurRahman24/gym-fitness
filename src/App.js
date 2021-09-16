@@ -10,6 +10,8 @@ import Login from './components/Login/Login';
 import Order from "./components/Order/Order/Order";
 import Review from "./components/Order/Order/Review/Review";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from "./components/Admin/Admin/Admin";
+import AddService from "./components/Admin/AddService/AddService";
 
 export const UserContext = createContext();
 
@@ -23,8 +25,11 @@ function App() {
         <Route exact path='/'>
           <Home></Home>
         </Route>
-        <Route exact path='/admin'>
-          <Home></Home>
+        <Route path='/admin/addService'>
+          <AddService></AddService>
+        </Route>
+        <Route path='/admin'>
+          <Admin></Admin>
         </Route>
         <PrivateRoute path='/order/review'>
           <Review></Review>

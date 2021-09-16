@@ -14,6 +14,7 @@ const Testimonial = () => {
 
   return (
     <section>
+      
       <Carousel
         showArrows={true}
         infiniteLoop={true}
@@ -22,20 +23,17 @@ const Testimonial = () => {
         autoPlay={true}
         interval={6100}
       >
-        <div>
-          {
-            testimonial.map(review =>
+        {
+            testimonial.map(review => <div>
               <div className="myCarousel">
-                <h3>{review.review.name}</h3>
-                <h4>Designer</h4>
-                <p>
-                  It's freeing to be able to catch up on customized news and not be
-                  distracted by a social media element on the same site
-                </p>
-              </div>
-            )
+                      <h3>{review.review.name}</h3>
+                      <h4>{review.review.email}</h4>
+                      <p>{review.review.feedback}
+                      </p>
+                    </div>
+              </div>)
           }
-        </div>
+        
       </Carousel>
 
     </section>
