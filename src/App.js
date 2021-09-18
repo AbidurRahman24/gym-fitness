@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Admin from "./components/Admin/Admin/Admin";
 import AddService from "./components/Admin/AddService/AddService";
 import ServiceList from "./components/Order/ServiceList/ServiceList";
+import ServiceCheckout from "./components/Order/CheckoutService/CheckoutService"
 
 export const UserContext = createContext();
 
@@ -21,34 +22,31 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Home></Home>
-        </Route>
-        <Route path='/admin/addService'>
-          <AddService></AddService>
-        </Route>
-        <Route path='/admin'>
-          <Admin></Admin>
-        </Route>
-        <Route path="/service/:id">
-              <ServiceList></ServiceList>
-            </Route>
-        <PrivateRoute path='/order/review'>
-          <Review></Review>
-        </PrivateRoute>
-        <PrivateRoute path='/order'>
-          <Order></Order>
-        </PrivateRoute>
-        <Route path='/login'>
-          <Login></Login>
-        </Route>
-        <Route path='*'>
-          <NoMatch></NoMatch>
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
+          <Route path='/admin/addService'>
+            <AddService></AddService>
+          </Route>
+          <Route path='/admin'>
+            <Admin></Admin>
+          </Route>
+          <PrivateRoute path="/service/:id">
+            <ServiceCheckout></ServiceCheckout>
+          </PrivateRoute>
+          <PrivateRoute path='/order/review'>
+            <Review></Review>
+          </PrivateRoute>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='*'>
+            <NoMatch></NoMatch>
+          </Route>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

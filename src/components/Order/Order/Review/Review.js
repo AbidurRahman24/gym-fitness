@@ -35,7 +35,7 @@ const Review = () => {
                     <SiteBar></SiteBar>
                 </div>
                 <div className="col-md-9  p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                <h5 className="text-brand">Add a Doctor</h5>
+                <h5 className="text-brand">Review</h5>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Name</label>
