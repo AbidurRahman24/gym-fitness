@@ -13,7 +13,7 @@ const SiteBar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
             <ul className="list-unstyled text-decoration-none">
                 <li>
-                    <Link to="/order/service" className="text-white">
+                    <Link to="/order" className="text-white">
                         <FontAwesomeIcon icon={faShoppingCart} /> <span>Service</span> 
                     </Link>
                 </li> <li>

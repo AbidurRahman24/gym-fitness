@@ -4,9 +4,9 @@ import {loadStripe} from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51JRrBrJJw9W9jRGG1SeX3fyEczwUy3LRpIt2UJwMwHCg5hHQJO3DABdA9dqfVp2FFvqLqxlyk3M3MJMn3uMqX4rR00DEG4pDeY');
 
 
-const Payment = () => {
+const Payment = ({handleBlur}) => {
     return (
-        <Elements stripe={stripePromise}>
+        <Elements onBlur={handleBlur} stripe={stripePromise}>
       <CardElement
   options={{
     style: {

@@ -11,6 +11,7 @@ const CheckoutService = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const [info, setInfo] = useState({})
+    console.log(info);
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
@@ -20,7 +21,7 @@ const CheckoutService = () => {
     const { id } = useParams()
 
     const [service, setService] = useState({})
-    console.log(service);
+    // console.log(service);
     useEffect(() => {
         const URL = `http://localhost:5000/services/${id}`
         fetch(URL)
@@ -31,10 +32,9 @@ const CheckoutService = () => {
             })
     }, [id])
 
-    const handleSubmit = (e) => {
-        const order = { ...loggedInUser, ServiceName: service.title };
-        console.log(e);
-        fetch('', {
+    const handleSubmit = () => {
+        const order = { ...loggedInUser, ServiceName: service.title, ServiceDescription: service.description, Order: info };
+        fetch('http://localhost:5000/addOrder', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ const CheckoutService = () => {
                     <SiteBar></SiteBar>
                 </div>
                 <div className="col-md-9 py-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-                    <h5>Book Proccess</h5>
+                    <h5>Booking Proccess</h5>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Name</label>
@@ -66,17 +66,17 @@ const CheckoutService = () => {
 
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Email</label>
-                            <input defaultValue={loggedInUser.email} onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="Enter Service Title" />
+                            <input defaultValue={loggedInUser.email} onBlur={handleBlur} type="text" className="form-control" name="email" />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="exampleInputEmail1">Service Title</label>
-                            <input defaultValue={service.title} onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="Enter Service Title" />
+                            <input defaultValue={service.title} onBlur={handleBlur} type="text" className="form-control" name="service"  />
                         </div>
 
                         <div className="form-group">
                         <label >Process to Payment</label>
-                            <Payment></Payment>
+                            <Payment handleBlur={handleBlur}></Payment>
                         </div>
                         
                         <button type="submit" className="btn btn-primary">Submit</button>

@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
-import AdminSidebar from '../../Admin/Sidebar/AdminSidebar';
+import SiteBar from '../../Shared/SiteBar/SiteBar';
+import ServiceCard from '../ServiceCard/ServiceCard';
 
 const ServiceList = () => {
-    
+    const [serviceData, SetServiceData] = useState({});
+    useEffect(()=>{
+        fetch('http://localhost:5000/orders')
+        .then(response => response.json())
+        .then(data => SetServiceData(data));
+    },[])
+
+
     return (
-        <section>
-            <AdminSidebar></AdminSidebar>
-        <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4FDFB" }}>
-            <h5 className="text-brand">Add a Service</h5>
-            
-        </div>
-        </section>
+        <>
+            <div className="container-fluet ">
+                <div className="row">
+                    <div className="col-md-3">
+                        <SiteBar></SiteBar>
+                    </div>
+                    <div className="col-md-9">
+                        <ServiceCard serviceData={serviceData}></ServiceCard>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </>
     );
 };
 
