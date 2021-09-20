@@ -1,29 +1,27 @@
 import React from 'react';
 
-const ManageTable = ({order, handleRemove}) => {
+const ManageTable = ({service, handleRemove}) => {
     return (
         <table className="table table-borderless">
             <thead>
                 <tr>
                 <th className="text-secondary text-left" scope="col">Order No</th>
-                <th className="text-secondary" scope="col">Name</th>
+                <th className="text-secondary" scope="col">Title</th>
                 <th className="text-secondary" scope="col">Email</th>
-                <th className="text-secondary" scope="col">Service</th>
-                <th className="text-secondary" scope="col">Pay With</th>
+                <th className="text-secondary" scope="col">Description</th>
                 <th className="text-secondary" scope="col">Cancel</th>
                 </tr>
             </thead>
             <tbody>
                 {
-                  order.map((order, index) => 
+                  service.map((service, index) => 
                         
                     <tr>
                         <td>{index + 1}</td>
-                        <td>{order.name}</td>
-                        <td>{order.email}</td>
-                        <td>{order.ServiceName}</td>
-                        <td>Credit Card</td>
-                        <td style={{cursor:'pointer'}} onClick={()=>handleRemove(order._id)}>Remove</td>
+                        <td>{service.title}</td>
+                        <td>{service.email}</td>
+                        <td>{service.description}</td>
+                        <td style={{cursor:'pointer'}} onClick={()=>handleRemove(service._id)}>Remove</td>
                     </tr>
                     )
                 }

@@ -20,6 +20,7 @@ const AddService = () => {
         formData.append('file', file);
         formData.append('title', info.title);
         formData.append('description', info.description);
+        formData.append('email', info.email);
 
         fetch('http://localhost:5000/addService', {
             method: 'POST',
@@ -42,6 +43,10 @@ const AddService = () => {
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Service Title</label>
                     <input onBlur={handleBlur} type="text" className="form-control" name="title" placeholder="Enter Service Title" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">Email</label>
+                    <input onBlur={handleBlur} type="text" className="form-control" name="email" placeholder="Enter Email" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Description</label>
