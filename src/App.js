@@ -10,10 +10,11 @@ import Login from './components/Login/Login';
 import Order from "./components/Order/Order/Order";
 import Review from "./components/Order/Order/Review/Review";
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Admin from "./components/Admin/Admin/Admin";
 import AddService from "./components/Admin/AddService/AddService";
 import ServiceList from "./components/Order/ServiceList/ServiceList";
 import ServiceCheckout from "./components/Order/CheckoutService/CheckoutService"
+import OrderList from "./components/Admin/OrderList/OrderList";
+import ManageService from "./components/Admin/ManageService/ManageService";
 
 export const UserContext = createContext();
 
@@ -27,11 +28,17 @@ function App() {
           <Route exact path='/'>
             <Home></Home>
           </Route>
+          <Route path='/admin/orderList'>
+            <OrderList></OrderList>
+          </Route>
           <Route path='/admin/addService'>
             <AddService></AddService>
           </Route>
+          <Route path='/admin/manageService'>
+            <ManageService></ManageService>
+          </Route>
           <Route path='/admin'>
-            <Admin></Admin>
+            <OrderList></OrderList>
           </Route>
           <PrivateRoute path='/order/review'>
             <Review></Review>

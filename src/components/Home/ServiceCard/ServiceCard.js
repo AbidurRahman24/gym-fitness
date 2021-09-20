@@ -2,7 +2,7 @@ import React from 'react';
 import './ServiceCard.css'
 
 const ServiceCard = ({service, handleAddService}) => {
-
+    
     return (
         <div className="col-md-4">
             <div class="service-container ">

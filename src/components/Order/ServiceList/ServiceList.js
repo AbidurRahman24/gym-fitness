@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import SiteBar from '../../Shared/SiteBar/SiteBar';
-import ServiceCard from '../ServiceCard/ServiceCard';
+import Card from '../Card/Card';
 
 const ServiceList = () => {
-    const [serviceData, SetServiceData] = useState({});
+    const [serviceData, SetServiceData] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/orders')
         .then(response => response.json())
-        .then(data => SetServiceData(data));
+        .then(data => {
+            // console.log(data[0].ServiceName);
+            SetServiceData(data[0])
+        });
     },[])
 
 
@@ -19,7 +22,10 @@ const ServiceList = () => {
                         <SiteBar></SiteBar>
                     </div>
                     <div className="col-md-9">
-                        <ServiceCard serviceData={serviceData}></ServiceCard>
+                        <div className='py-5'>
+                        <h5>Service List</h5>
+                        </div>
+                        <Card serviceData={serviceData}></Card>
                     </div>
                 </div>
             </div>

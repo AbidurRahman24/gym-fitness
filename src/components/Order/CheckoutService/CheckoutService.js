@@ -11,7 +11,7 @@ const CheckoutService = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const [info, setInfo] = useState({})
-    console.log(info);
+    // console.log(info);
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
@@ -43,7 +43,7 @@ const CheckoutService = () => {
           })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
             })
             .catch(error => {
                 console.error(error)
