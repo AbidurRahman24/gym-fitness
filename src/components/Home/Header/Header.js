@@ -18,7 +18,7 @@ const Header = () => {
             <div className="container header-background">
                 <div style={{height:'600px'}} className="row d-flex align-items-center">
                     <div className="col-md-6 col-sm-12" >
-                        <h1>CHALLANGE <br />   <span> YOUR FITNESS</span> </h1>
+                        <h1 style={{fontFamily: 'Teko', }}>CHALLANGE <br />   <span> YOUR FITNESS</span> </h1>
                         <div className={classes.root}>
                         <Button variant="contained" color="primary">
                             READ MORE

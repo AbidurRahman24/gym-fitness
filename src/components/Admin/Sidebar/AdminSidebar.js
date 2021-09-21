@@ -27,7 +27,7 @@ const AdminSidebar = () => {
                     </Link>
                 </li>
                 {
-                    isAdmin || <div>
+                    isAdmin && <div>
                         <li>
                             <Link to="/admin/addService" className="text-white">
                                 <FontAwesomeIcon icon={faCalendar} /> <span>Add Service</span>

@@ -47,7 +47,7 @@ const Training = () => {
     return (
         <section className="training-container">
             <div className="row">
-                <div className='trainig-text text-center pt-4 w-100'>
+                <div className='trainig-text text-center pt-4 w-100' style={{fontFamily: 'Teko'}}>
                     <h2 className='pt-3'>TRAINING PROGRAMS</h2>
                     <p >Let us take your workout routines to the next level with our full-body programs and <br /> intensity challenges. Find a training that matches your needs.</p>
                 </div>
