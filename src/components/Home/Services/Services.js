@@ -20,6 +20,10 @@ const Services = () => {
     return (
         <section>
             <div className='row'>
+            <div className='trainig-text text-center pt-4 py-5 w-100' style={{fontFamily: 'Teko'}}>
+                    <h2 className='pt-3'>Our Services</h2>
+                    <p >After you decide to start training we will make sure you get the best fitness program. <br /> Our sport experts and latest sports equipment are the winning combination.</p>
+                </div>
                 {
                     serviceInfo.map(service => <ServiceCard handleAddService={handleAddService} key={service._id} service={service} ></ServiceCard>)
                 }
