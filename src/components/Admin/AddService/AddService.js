@@ -22,7 +22,7 @@ const AddService = () => {
         formData.append('description', info.description);
         formData.append('email', info.email);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://tranquil-everglades-13091.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

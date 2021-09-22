@@ -23,7 +23,7 @@ const CheckoutService = () => {
     const [service, setService] = useState({})
     // console.log(service);
     useEffect(() => {
-        const URL = `http://localhost:5000/services/${id}`
+        const URL = `https://tranquil-everglades-13091.herokuapp.com/services/${id}`
         fetch(URL)
             .then(res => res.json())
             .then(data => {
@@ -34,7 +34,7 @@ const CheckoutService = () => {
 
     const handleSubmit = () => {
         const order = { ...loggedInUser, ServiceName: service.title, ServiceDescription: service.description, Order: info };
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://tranquil-everglades-13091.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

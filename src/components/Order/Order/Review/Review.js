@@ -13,7 +13,7 @@ const Review = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const handleSubmit = () => {
         const reviews = { ...loggedInUser, review: info };
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://tranquil-everglades-13091.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

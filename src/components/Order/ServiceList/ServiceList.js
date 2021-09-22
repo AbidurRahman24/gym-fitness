@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 const ServiceList = () => {
     const [serviceData, SetServiceData] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://tranquil-everglades-13091.herokuapp.com/orders')
         .then(response => response.json())
         .then(data => {
             // console.log(data[0].ServiceName);

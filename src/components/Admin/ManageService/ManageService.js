@@ -5,7 +5,7 @@ import AdminSidebar from '../Sidebar/AdminSidebar';
 const ManageService = () => {
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://tranquil-everglades-13091.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -13,7 +13,7 @@ const ManageService = () => {
             })
     }, [])
     const handleRemove = id => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://tranquil-everglades-13091.herokuapp.com/delete/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

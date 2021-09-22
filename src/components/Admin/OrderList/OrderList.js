@@ -5,7 +5,7 @@ import AdminSidebar from '../Sidebar/AdminSidebar';
 const OrderList = () => {
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://tranquil-everglades-13091.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
