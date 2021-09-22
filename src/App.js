@@ -52,7 +52,6 @@ function App() {
           <PrivateRoute path="/order">
             <ServiceCheckout></ServiceCheckout>
           </PrivateRoute>
-          
           <Route path='/login'>
             <Login></Login>
           </Route>

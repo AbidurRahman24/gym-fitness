@@ -22,7 +22,7 @@ const AdminSidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled text-decoration-none">
                 <li>
-                    <Link to="/admin/orderList" className="text-white">
+                    <Link to="/admin" className="text-white">
                         <FontAwesomeIcon icon={faShoppingCart} /> <span>Order List</span>
                     </Link>
                 </li>
