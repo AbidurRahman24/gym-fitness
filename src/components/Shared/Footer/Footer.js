@@ -6,34 +6,33 @@ import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brand
 
 const Footer = () => {
     const noNamed = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
+        {name: "Power zone gym" , link: "/home"},
+        {name: "Get Service" , link: "/service"},
+        {name: "GROUP FITNESS" , link: "/personal-treatment"},
+        {name: "PERSONAL TRAINER" , link: "/tooth-extract"},
+        {name: "CARDIO PROGRAM" , link: "/Service"},
     ]
     const ourAddress = [
         {name: "New York - 101010 Hudson" , link: "//google.com/map"},
         {name: "Yards" , link: "//google.com/map"},
        
     ]
-    const oralHealth = [
+    const ourService = [
         {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
+        {name: "Get Services" , link: "/Service"},
+        {name: "Treatment of Personal DiseasesGROUP FITNESS" , link: "/tooth-extract"},
+        {name: "Get Services" , link: "/Service"},
+        {name: "Get Services" , link: "/Service"},
+        {name: "Get Services" , link: "/Service"}
     ]
     const services = [
         {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
+        {name: "Get Services" , link: "/Service"},
         {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
         {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
+        {name: "Get Services" , link: "/Service"},
+        {name: "Get Services" , link: "/Service"},
+        {name: "Get Services" , link: "/Service"}
     ]
     return (
         <footer className="footer-area clear-both text-white">
@@ -41,7 +40,7 @@ const Footer = () => {
             <div className="row py-5 ">
                 <FooterCol key={1} menuTitle={"."} menuItems={noNamed}/>
                 <FooterCol key={2} menuTitle="Services" menuItems={services}/>
-                <FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth}/>
+                <FooterCol key={3} menuTitle="Oral Health" menuItems={ourService}/>
                 <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
                     <ul className="social-media list-inline">
                         <li className="list-inline-item"><a href="https://www.facebook.com/Abidur.Niloy.DarkCoder/"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
