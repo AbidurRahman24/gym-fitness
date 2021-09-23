@@ -18,18 +18,18 @@ const Footer = () => {
        
     ]
     const ourService = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
+        {name: "Functional Training Area" , link: "/emergency"},
         {name: "Get Services" , link: "/Service"},
-        {name: "Treatment of Personal DiseasesGROUP FITNESS" , link: "/tooth-extract"},
+        {name: "GROUP FITNESS" , link: "/group-fitness"},
         {name: "Get Services" , link: "/Service"},
         {name: "Get Services" , link: "/Service"},
         {name: "Get Services" , link: "/Service"}
     ]
     const services = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
+        {name: "Zumba Aerobics" , link: "/emergency"},
         {name: "Get Services" , link: "/Service"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
+        {name: "fitness" , link: "/fitness"},
+        {name: "Body Health" , link: "/Health"},
         {name: "Get Services" , link: "/Service"},
         {name: "Get Services" , link: "/Service"},
         {name: "Get Services" , link: "/Service"}
@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="row py-5 ">
                 <FooterCol key={1} menuTitle={"."} menuItems={noNamed}/>
                 <FooterCol key={2} menuTitle="Services" menuItems={services}/>
-                <FooterCol key={3} menuTitle="Oral Health" menuItems={ourService}/>
+                <FooterCol key={3} menuTitle=" Personal Training" menuItems={ourService}/>
                 <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
                     <ul className="social-media list-inline">
                         <li className="list-inline-item"><a href="https://www.facebook.com/Abidur.Niloy.DarkCoder/"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
