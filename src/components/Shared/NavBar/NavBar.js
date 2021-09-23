@@ -15,7 +15,7 @@ const NavBar = () => {
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav ms-auto mt-2 text-dark">
+                    <ul class="navbar-nav ml-auto mt-2 text-dark">
                         <Link class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
                         </Link>
